@@ -8,7 +8,7 @@ include "Conn.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Shopping Site</title>
-    <link rel="stylesheet" href="Css/Login.css">
+    <link rel="stylesheet" href="Login.css">
 </head>
 
 <body>

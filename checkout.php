@@ -41,7 +41,7 @@ if ($result_cart && mysqli_num_rows($result_cart) > 0) {
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            background-image: url("Css/Img/BackGrounf/check.avif");
+            background-image: url("Img/BackGrounf/check.avif");
             background-size: cover  ;
             background-color: #fff;
             border-radius: 10px;

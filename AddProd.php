@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0px;
-      background-image:url("Css/Img/AddProd.jpg");
+      background-image:url("Img/AddProd.jpg");
       background-size: cover;
       opacity: 0.8;
       display:block;

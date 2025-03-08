@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>e-Clothing Slider</title>
-  <link rel="stylesheet" href="Css/Slider.css">
+  <link rel="stylesheet" href="Slider.css">
 </head>
 <body>
   <div class="slider">

@@ -23,16 +23,16 @@
         <div class="footer-section">
             <h4>EXPERIENCE StyleAdda APP</h4>
             <div class="app-links">
-                <a href="#"><img src="Css/Img/gooleplay-removebg-preview.png" alt="Google Play"></a>
-                <a href="#"><img src="Css/Img/AppStore-removebg-preview.png" alt="App Store"></a>
+                <a href="#"><img src="Img/gooleplay-removebg-preview.png" alt="Google Play"></a>
+                <a href="#"><img src="Img/AppStore-removebg-preview.png" alt="App Store"></a>
             </div>
         </div>
         <!-- <div class="footer-section">
             <h4>KEEP IN TOUCH</h4>
             <div class="social-links">
-                <a href="#"><img src="Css/Img/Logo/Fb.png" alt="Facebook"></a>
-                <a href="#"><img src="Css/Img/Logo/Xicon.png" alt="X"></a>
-                <a href="#"><img src="Css/Img/Logo//Insta.jpg" alt="Instagram"></a>
+                <a href="#"><img src="Img/Logo/Fb.png" alt="Facebook"></a>
+                <a href="#"><img src="Img/Logo/Xicon.png" alt="X"></a>
+                <a href="#"><img src="Img/Logo//Insta.jpg" alt="Instagram"></a>
             </div>
         </div> -->
     </div>

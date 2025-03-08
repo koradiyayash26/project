@@ -3,36 +3,32 @@ session_start();
 include("Conn.php");
 
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['add_cart'])) {
-    if (!empty($_POST['product_id']) && isset($_SESSION['user_id'])) {
-        $user_id = $_SESSION['user_id']; // Assuming user session ID is stored
+    if (!empty($_POST['product_id'])) {
+        $user_id = $_POST['user_id'];
         $product_id = mysqli_real_escape_string($conn, $_POST['product_id']);
         
-        // Validate and sanitize 'product_name' and 'price'
-        $product_name = !empty($_POST['product_name']) ? mysqli_real_escape_string($conn, $_POST['product_name']) : '';
-        $price = !empty($_POST['price']) ? mysqli_real_escape_string($conn, $_POST['price']) : 0;
-        $quantity = 1; // Default quantity
-
         // Check if the product is already in the cart
         $check_cart = "SELECT * FROM Cart_demo WHERE User_Id='$user_id' AND Product_Id='$product_id'";
         $result_check = mysqli_query($conn, $check_cart);
 
         if ($result_check && mysqli_num_rows($result_check) > 0) {
-            // Update quantity if product exists
-            $update_cart = "UPDATE Cart_demo SET Quantity = Quantity + 1 WHERE User_Id='$user_id' AND Product_Id='$product_id'";
-            $query_update = mysqli_query($conn, $update_cart);
+            // Product already exists in cart
+            echo "<script>alert('Product already in cart');</script>";
         } else {
             // Insert new product into cart
-            $insert_cart = "INSERT INTO Cart_demo (User_Id, Product_Id, Quantity) VALUES ('$user_id', '$product_id', '$quantity')";
+            $insert_cart = "INSERT INTO Cart_demo (User_Id, Product_Id) VALUES ('$user_id', '$product_id')";
             $query_insert = mysqli_query($conn, $insert_cart);
+            
+            if ($query_insert) {
+                echo "<script>
+                    localStorage.setItem('user_id', '" . $user_id . "');
+                    alert('Added to Cart Successfully'); 
+                    window.location.href='Cart_demo.php';
+                </script>";
+            } else {
+                echo "<script>alert('Error adding to cart');</script>";
+            }
         }
-
-        if ((isset($query_insert) && $query_insert) || (isset($query_update) && $query_update)) {
-            echo "<script>alert('Added to Cart Successfully'); window.location.href='Cart_demo.php';</script>";
-        } else {
-            echo "<script>alert('Error adding to cart');</script>";
-        }
-    } else {
-        echo "<script>alert('Please log in to add items to the cart'); window.location.href='index.php';</script>";
     }
 }
 ?>
@@ -139,6 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['add_cart'])) {
                                     <input type="hidden" name="product_id" value="' . $row['Product_Id'] . '">
                                     <input type="hidden" name="product_name" value="' . $row['Product_Name'] . '">
                                     <input type="hidden" name="price" value="' . $row['Price'] . '">
+                                    <input type="hidden" name="user_id" id="user_id_input">
                                     <button type="submit" class="add-to-cart" name="add_cart">Add to Cart</button>
                                 </form>
                             </div>';
@@ -149,6 +146,17 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['add_cart'])) {
             ?>
         </div>
     </div>
+
+    <script>
+        // Set user_id to form input when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const userId = localStorage.getItem('user_id');
+            const userIdInputs = document.querySelectorAll('#user_id_input');
+            userIdInputs.forEach(input => {
+                input.value = userId;
+            });
+        });
+    </script>
 </body>
 
 </html>

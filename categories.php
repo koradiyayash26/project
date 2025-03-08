@@ -69,14 +69,14 @@
         <div class="category-container">
             <a href="Men.php">
             <div class="card">
-                <img src="Css/Img/Shirts/S_Img1.jpg" alt="Men's Clothing">
+                <img src="Img/Shirts/S_Img1.jpg" alt="Men's Clothing">
                 <p>Men's Clothing</p>
             </div>
             </a>
 
             <a href="Women.php">
             <div class="card">
-                <img src="Css/Img/Women/blum-09.webp" alt="Women's Clothing">
+                <img src="Img/Women/blum-09.webp" alt="Women's Clothing">
                 <p>Women's Clothing</p>
             </div>
             </a>

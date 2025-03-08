@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Fusion</title>
-    <link rel="stylesheet" href="Css/Styles.css">
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
     <header>

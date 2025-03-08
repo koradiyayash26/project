@@ -74,6 +74,25 @@ session_start(); // Start session to track users
 </head>
 
 <body>
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const userId = localStorage.getItem('user_id');
+            if (!userId) {
+                alert('Please login to access your cart');
+                window.location.href = 'Index.php';
+                return;
+            }
+        });
+    </script>
+
+    <!-- Add logout button -->
+    <div style="text-align: right; padding: 10px;">
+        <button onclick="logout()" style="padding: 8px 15px; background-color: #ff4444; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Logout
+        </button>
+    </div>
+
     <?php include "Header.php"; ?>
     <div class="container">
         <h2>Your Shopping Cart</h2>
@@ -180,5 +199,13 @@ session_start(); // Start session to track users
         echo "<script>alert('Item removed from cart!'); window.location.href='Cart_demo.php';</script>";
     }
     ?>
+
+    <script>
+        // Add logout function
+        function logout() {
+            localStorage.removeItem('user_id');
+            window.location.href = 'Index.php';
+        }
+    </script>
 </body>
 </html>

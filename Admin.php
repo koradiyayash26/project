@@ -53,7 +53,7 @@
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
-  <img src="Css/Img/Logo/StyleAdda-removebg-preview.png" width="100" height="100" >
+  <img src="Img/Logo/StyleAdda-removebg-preview.png" width="100" height="100" >
     <a href="deshboard.php" target="content">Dashboard</a>
     <a href="Products.php" target="content">View Products</a>
     <a href="Orders.php" target="content">Orders</a>

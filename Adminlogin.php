@@ -36,7 +36,7 @@
 
 /* Background and Container */
 body {
-    background-image: url("Css/Img/BackGrounf/AdminHD.jpg");
+    background-image: url("Img/BackGrounf/AdminHD.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
