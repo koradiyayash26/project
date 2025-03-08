@@ -1,0 +1,113 @@
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('Img/Background_image/3d_dna-2560x1440.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            opacity: 0.7;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+        }
+
+        input[type="email"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color:rgb(24, 37, 134);
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            transition: background-color 0.3s ease;
+            border-radius: 50px;
+        }
+
+        input[type="submit"]:hover {
+            background-color:rgb(26, 122, 136);
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        .note a {
+            color:rgb(37, 10, 239);
+            text-decoration: none;
+        }
+
+        .note a:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .forgot-password a {
+            color:rgb(17, 17, 239);
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }

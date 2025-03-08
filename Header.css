@@ -1,0 +1,33 @@
+header {
+    background-image: url("Css/Img/Background_image/Bluesky.jpg");
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem;
+    text-align: left;
+
+}
+
+nav {
+    display: flex;
+    justify-content: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    border-radius: 5px;
+}
+span{
+    color: rgb(233, 14, 14);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin: 10px;
+}
